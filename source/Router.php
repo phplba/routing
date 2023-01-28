@@ -13,7 +13,7 @@ class Router {
 	}
 
 	public function resolve(string $URL = null) {
-		if ($URL = null) {
+		if ($URL == null) {
 			$URL = self::defaultURL();
 		}
 		if (isset($this->static[$URL])) {
