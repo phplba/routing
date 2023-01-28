@@ -18,7 +18,7 @@ use phplba/Routing/Router;
 $router = new Router($routes, $regex);
 $selected_route = $router->resolve($uri);
 ```
-You can find more information on the [documentation](DOCUMENTATION.md).
+You can find more information on the [documentation](documentation/readme.md).
 
 ## ❤️ Support  
 A simple star to this project repo is enough to keep me motivated on this project for days. If you find your self very much excited with this project let me know with a discord MP.
