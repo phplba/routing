@@ -1,5 +1,5 @@
 {
-	"name": "phphlba/routing",
+	"name": "phplba/routing",
 	"type": "library",
 	"description": "Determines the right static or dynamic route based on a provided url in the most effective way.",
 	"keywords": [
