@@ -50,14 +50,15 @@ $router->resolve($sample_uri);
 use phplba\Routing\Router;
 $router = new Router($sample_route, $sample_regex);
 $route = $router->resolve($sample_uri);
+// Output $route = { route: mixed, match: array }
 
 // Call to your controller, guard, hook,  service and anything else you may need
 // is your responsibility
-foreach ($route[2] as $guard) {
+foreach ($route->route[2] as $guard) {
 	$guard();
 }
-$response = $route[0]($route[1]);
-foreach ($route[3] as $hook) {
+$response = $route->route[0]([...$route->match, $route->route[1]]);
+foreach ($route->route[3] as $hook) {
 	$hook();
 }
 
