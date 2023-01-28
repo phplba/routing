@@ -20,6 +20,7 @@ class Router {
 			return [
 				'route' => $this->static[$URL],
 				'matches' => [],
+				'path' => $URL,
 			];
 		}
 		if (!preg_match($this->regex, $URL, $matches)) {
@@ -30,10 +31,12 @@ class Router {
 		}
 		if (isset($this->dynamic[$matches['MARK']])) {
 			$route = $this->dynamic[$matches['MARK']];
+			unset($matches['0']);
 			unset($matches['MARK']);
 			return [
 				'route' => $route,
-				'matches' => $matches,
+				'matches' => array_values($matches),
+				'path' => $URL,
 			];
 		}
 		throw new RoutingError(
