@@ -1,7 +1,7 @@
 {
 	"name": "phphlba/routing",
 	"type": "library",
-	"description": "Maps an HTTP request to a set of configuration variables",
+	"description": "Determines the right static or dynamic route based on a provided url in the most effective way.",
 	"keywords": [
 		"routing",
 		"router",
