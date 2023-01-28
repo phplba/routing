@@ -14,7 +14,7 @@ class Router {
 
 	public function resolve(string $URL = null) {
 		if ($URL = null) {
-			$URL = self::getPATH();
+			$URL = self::defaultURL();
 		}
 		if (isset($this->static[$URL])) {
 			return [
@@ -42,7 +42,7 @@ class Router {
 		);
 	}
 
-	public static function getPATH(): string {
+	public static function defaultURL(): string {
 		$URI = $_SERVER['REQUEST_URI'];
 		if (false !== ($I = strpos($URI, '?'))) {
 			$URI = substr($URI, 0, $I);
