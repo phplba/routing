@@ -1,0 +1,29 @@
+{
+	"name": "phphlba/routing",
+	"type": "library",
+	"description": "Maps an HTTP request to a set of configuration variables",
+	"keywords": [
+		"routing",
+		"router",
+		"URL",
+		"URI"
+	],
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Angelisium",
+			"email": "angelisium@daum.net"
+		}
+	],
+	"require-dev": {
+		"phpunit/phpunit": "^9.5"
+	},
+	"autoload": {
+		"psr-4": {
+			"phplba\\Routing\\": "source/"
+		},
+		"exclude-from-classmap": [
+			"/test/"
+		]
+	}
+}
